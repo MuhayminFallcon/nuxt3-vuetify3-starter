@@ -11,12 +11,11 @@ export default defineNuxtPlugin((app) => {
         light,
         dark,
       },
-      // add color variations
-      //   variations: {
-      //     colors: ["primary", "secondary"],
-      //     lighten: 3,
-      //     darken: 3,
-      //   },
+      variations: {
+          colors: ["primary", "secondary"],
+          lighten: 3,
+          darken: 3,
+        },
     },
     // Add the custom iconset
     icons: {

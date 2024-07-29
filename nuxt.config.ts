@@ -12,7 +12,10 @@ const themeColor = "#4f46e5";
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   // import styles
-  css: ["@/assets/main.scss"],
+    css: [
+      '@/assets/styles/tailwind.css', // Ensure this is correct
+      '@/assets/main.scss', // Ensure this is correct
+    ],
 
   devtools: { enabled: true },
 
@@ -31,6 +34,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    '@nuxtjs/i18n',
     "@vite-pwa/nuxt",
     async (options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
@@ -39,6 +43,15 @@ export default defineNuxtConfig({
       });
     },
   ],
+  i18n: {
+    locales: [
+      { code: 'en', name: 'English', dir: 'ltr', file: 'en.json' },
+      { code: 'ar', name: 'Arabic', dir: 'rtl', file: 'ar.json' },
+    ],
+    defaultLocale: 'en',
+    langDir: 'locales/',
+    vueI18n: './i18n.config.ts',
+  },
 
   app: {
     head: {

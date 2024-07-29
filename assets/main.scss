@@ -1,8 +1,10 @@
+
 $family: "Inter var", "Inter", apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
   Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
 @use "vuetify" with (
   $body-font-family: $family
+
 );
 
 :root {
@@ -33,6 +35,7 @@ a {
 .v-btn {
   font-weight: 700 !important;
 }
+
 .label {
   font-weight: 600;
   font-size: 15px;
@@ -43,7 +46,7 @@ a {
 // Theme gradients
 .gradient {
   &.primary {
-    color: white;
+    color: #CF142F;
     background: linear-gradient(
       318deg,
       rgba(67, 56, 202, 1) 12%,
